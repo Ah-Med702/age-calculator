@@ -209,8 +209,7 @@ function findError() {
         daySpan.innerHTML = "--";
         monthSpan.innerHTML = "--";
         yearSpan.innerHTML = "--";
-    }
-    if (
+    } else if (
         yearInput.value >= year &&
         monthInput.value >= month &&
         dayInput.value > day
@@ -242,6 +241,58 @@ function findError() {
 
         yearLabel.style.color = "#ff5757";
         yearInput.style.borderColor = "#ff5757";
+
+        daySpan.style.color = "#ff5757";
+        monthSpan.style.color = "#ff5757";
+        yearSpan.style.color = "#ff5757";
+
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
+    } else if (
+        yearInput.value > year &&
+        monthInput.value > month &&
+        dayInput.value > day
+    ) {
+        yearErrorSpan.innerHTML = "must be in the past";
+
+        yearLabel.style.color = "#ff5757";
+        yearInput.style.borderColor = "#ff5757";
+
+        monthErrorSpan.innerHTML = "must be in the past";
+
+        monthLabel.style.color = "#ff5757";
+        monthInput.style.borderColor = "#ff5757";
+
+        dayErrorSpan.innerHTML = "must be in the past";
+
+        dayLabel.style.color = "#ff5757";
+        dayInput.style.borderColor = "#ff5757";
+
+        daySpan.style.color = "#ff5757";
+        monthSpan.style.color = "#ff5757";
+        yearSpan.style.color = "#ff5757";
+
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
+    } else if (
+        yearInput.value > year
+    ) {
+        yearErrorSpan.innerHTML = "must be in the past";
+
+        yearLabel.style.color = "#ff5757";
+        yearInput.style.borderColor = "#ff5757";
+
+        monthErrorSpan.innerHTML = "must be in the past";
+
+        monthLabel.style.color = "#ff5757";
+        monthInput.style.borderColor = "#ff5757";
+
+        dayErrorSpan.innerHTML = "must be in the past";
+
+        dayLabel.style.color = "#ff5757";
+        dayInput.style.borderColor = "#ff5757";
 
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
