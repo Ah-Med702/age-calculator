@@ -45,6 +45,9 @@ function findError() {
         ((yearInput.value < year &&
             monthInput.value < month &&
             dayInput.value < day) ||
+            (yearInput.value < year &&
+                monthInput.value > month &&
+                dayInput.value > day) ||
             (yearInput.value <= year &&
                 monthInput.value < month &&
                 dayInput.value < day) ||
@@ -206,7 +209,8 @@ function findError() {
         daySpan.innerHTML = "--";
         monthSpan.innerHTML = "--";
         yearSpan.innerHTML = "--";
-    } else if (
+    }
+    if (
         yearInput.value >= year &&
         monthInput.value >= month &&
         dayInput.value > day
